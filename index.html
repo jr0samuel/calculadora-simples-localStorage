@@ -15,13 +15,11 @@
     <div id="spacecalc" class="calc container-fluid">
         <div id="calcs" class="row calc-content justify-content-center w-100 mx-auto">
             <div id="calc1" class="col-12 col-md-8 col-lg-6 col-xl-4 ">
-                <div id="calc2" class="container calc-top">
-                    <div id="calc3" class="calc-top-result row">
-                        <input type="text" class="col-12" id="display" disabled>
-                    </div>
-                </div>
                 <div id="calc4" class="calc-keys">
-                    <div class="container">
+                    <div id="calc5" class="container">
+                        <div id="calc3" class="calc-top-result row">
+                            <input type="text" class="col-12" id="display">
+                        </div>
                         <div class="row">
                             <input class="col" type="button" value="+" onclick="addInputToDisplay('+')">
                             <input class="col" type="button" value="-" onclick="addInputToDisplay('-')">
@@ -55,9 +53,10 @@
                         </div>
                         <div id="store" class="row">
                             <h3 id="history">Histórico</h3>
-                            <hr class="taghr">
-                            <table id="storage" class="table">
-                            </table>
+                        </div>
+                        <br>
+                        <div id="tabela" class="row">
+                            <table id="storage" class="table"></table>
                         </div>
                     </div>
                 </div>
@@ -89,6 +88,14 @@
             </div>
         </div>
     </div>
+    <div style="display:none" id="excluir" class="position-absolute top-0">
+        <div class="alert alert-info alerta">
+            <div>
+                Conta excluída
+                <button class="btn btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 
@@ -103,7 +110,7 @@
             $("#save").on('click', () => {
                 const tela = $("#display").val();
                 $("#spacecalc").addClass("spaceforcalc")
-                if (tela){
+                if (tela) {
                     $("#messagesave").show(1250).fadeOut(5000);
                 } else {
                     $("#empty").show(1250).fadeOut(5000);
@@ -114,7 +121,7 @@
             });
             $("#equals").on('click', () => {
                 const telinha = $("#display").val();
-                if (telinha == ""){
+                if (telinha == "") {
                     $("#spacecalc").addClass("spaceforcalc")
                     $("#vazio").show(1250).fadeOut(5000);
                 }
@@ -122,7 +129,13 @@
                     $("#spacecalc").removeClass("spaceforcalc")
                 }, 5350)
             });
-            
+            $("#btn-trash").on('click', () => {
+                $("#spacecalc").addClass("spaceforcalc");
+                $("#excluir").show(1250).fadeOut(5000);
+                setTimeout( () => {
+                    $("#spacecalc").removeClass("spaceforcalc");
+                }, 5350);
+            });
     </script>
 
 </body>

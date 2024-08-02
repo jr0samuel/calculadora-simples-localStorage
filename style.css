@@ -21,44 +21,70 @@ h1 {
     color: tan;
     text-align: center;
 }
-#spacecalc {
-    margin-bottom: 50px;
-}
 .spaceforcalc {
     margin-top: 50px;
 }
-#messagesave, #empty, #vazio {
+#messagesave, #empty, #vazio, #excluir {
     margin-top: 50px;
+}
+#calc5 {
+    border: 1px solid white;
 }
 #store {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 700px;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    border: 1px solid red;
 }
 #history {
     color: yellowgreen;
     padding-top: 10px;
     text-align: center;
+    position: relative;
+}
+#history::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: yellow;
+    left: 0;
+    bottom: -15px;
 }
 .taghr {
     background-color: yellow;
     height: 5px;
     width: 100%;
 }
+#tabela {
+    max-height: 200px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
 #storage tr {
-    list-style-type: none;
     word-break: break-word;
     gap: 1rem;
+    position: relative;
+}
+#storage tr::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: yellowgreen;
+    left: 0;
+    bottom: -21px;
 }
 #storage td {
     color: chartreuse;
-    border: 1px solid blue;
-    padding: 0px 7px 0px 10px;
+    border-bottom: 1px solid blue;
+    border-top: 1px solid blue;
+    padding: 5px 10px 5px 10px;
     background-color: black;
+}
+#botao_trash {
+    border-left: 1px solid blue;
 }
 #btn-trash {
     font-size: 1.5rem;
