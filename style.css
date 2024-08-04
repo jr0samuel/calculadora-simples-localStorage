@@ -1,3 +1,4 @@
+/* index.html */
 :root {
     --color-dark: rgb(14, 14, 14);
     --color-dark2: rgb(32, 32, 32);
@@ -100,4 +101,40 @@ h1 {
 }
 #btn-trash:hover {
     background-color: rgb(146, 22, 17);
+}
+#botao-dicas {
+    text-decoration: none;
+    color: var(--color-dark);
+    background: gray;
+    text-align: center;
+    padding: 5px 0px;
+    border: var(--color-dark) 1px solid;
+}
+/* dicas.html */
+#botao-voltar {
+    color: var(--color-dark);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0px;
+    position: relative;
+    background: gray;
+}
+#botao-voltar::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: blue;
+    left: 0;
+    bottom: -15px;
+}
+#tetra {
+    color:#fff;
+    background: none;
+}
+#dicas-conteiner {
+    max-height: 450px;
+    overflow-x: scroll;
+    scrollbar-width: none;
 }
