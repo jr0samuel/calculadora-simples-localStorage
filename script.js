@@ -80,13 +80,4 @@ function removeConta(data)
     localStorage.setItem(localStorageKey, JSON.stringify(contas))
     showContas()
 }
-// $(document).ready(function () {
-//     $("#btn-trash").on('click', () => {
-//         $("#spacecalc").addClass("spaceforcalc");
-//         $("#excluir").show(1250).fadeOut(5000);
-//         setTimeout( () => {
-//             $("#spacecalc").removeClass("spaceforcalc");
-//         }, 5350);
-//     });
-// });
 showContas()
