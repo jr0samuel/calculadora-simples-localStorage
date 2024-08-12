@@ -5,9 +5,28 @@ function addInputToDisplay(input) {
     const displayValue = display.value
     display.value = displayValue + input
 }
+function addInputToDisplay1() {
+    const valueDisplay = display.value
+    display.value = valueDisplay + "("
+}
+function addInputToDisplay2() {
+    const valueDisplay = display.value
+    display.value = valueDisplay + ")"
+}
+function addInputForDisplay(v) {
+    const valorTela = display.value
+    if (v == 1) {
+        display.value = valorTela + "[";
+    } else if (v == 2) {
+        display.value = valorTela + "]";
+    } else if (v == 3) {
+        display.value = valorTela + "{";
+    } else if (v == 4) {
+        display.value = valorTela + "}";
+    }
+}
 function calculate() {
     if (display.value === '') return
-    
     const result = eval(display.value)
     display.value = result
 }
@@ -37,7 +56,7 @@ function showContas()
     for(let i = 0; i < contas.length; i++)
     {
         list.innerHTML += `<tr scope="row">
-            <td id='resultado'>${contas[i]['conta']}</td>
+            <td id='resultado' tabindex="0" onclick="addDisplay('${contas[i]['conta']}')">${contas[i]['conta']}</td>
             <td id='botao_trash'>
                 <button id='btn-trash' onclick='removeConta("${contas[i]['conta']}")'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
@@ -50,6 +69,9 @@ function showContas()
         <hr class="taghr" style="opacity:0 !important">`;
     }
 }
+function addDisplay(resultado) {
+    display.value = resultado
+}
 function removeConta(data)
 {
     let contas = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
@@ -58,4 +80,13 @@ function removeConta(data)
     localStorage.setItem(localStorageKey, JSON.stringify(contas))
     showContas()
 }
+// $(document).ready(function () {
+//     $("#btn-trash").on('click', () => {
+//         $("#spacecalc").addClass("spaceforcalc");
+//         $("#excluir").show(1250).fadeOut(5000);
+//         setTimeout( () => {
+//             $("#spacecalc").removeClass("spaceforcalc");
+//         }, 5350);
+//     });
+// });
 showContas()
