@@ -100,14 +100,6 @@
             </div>
         </div>
     </div>
-    <div style="display:none" id="excluir" class="position-absolute top-0">
-        <div class="alert alert-info alerta">
-            <div>
-                Conta excluída
-                <button class="btn btn-close" data-bs-dismiss="alert"></button>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 
@@ -140,13 +132,6 @@
                 setTimeout( () => {
                     $("#spacecalc").removeClass("spaceforcalc")
                 }, 5350)
-            });
-            $("#btn-trash").on('click', () => {
-                $("#spacecalc").addClass("spaceforcalc");
-                $("#excluir").show(1250).fadeOut(5000);
-                setTimeout( () => {
-                    $("#spacecalc").removeClass("spaceforcalc");
-                }, 5350);
             });
     </script>
 
