@@ -23,6 +23,8 @@ body {
 h1 {
     color: tan;
     text-align: center;
+    word-break: break-word;
+    padding: 10px;
 }
 .spaceforcalc {
     margin-top: 50px;
@@ -43,6 +45,7 @@ h1 {
     padding-top: 10px;
     text-align: center;
     position: relative;
+    word-break: break-word;
 }
 #history::after {
     content: "";
