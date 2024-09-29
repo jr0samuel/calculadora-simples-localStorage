@@ -56,8 +56,10 @@ function showContas()
     for(let i = 0; i < contas.length; i++)
     {
         list.innerHTML += `<tr scope="row">
-            <td id='resultado' tabindex="0" onclick="addDisplay('${contas[i]['conta']}')">${contas[i]['conta']}</td>
-            <td id='botao_trash'>
+            <td id='resultado' onclick="addDisplay('${contas[i]['conta']}')" tabindex="0">
+                <span tabindex="0">${contas[i]['conta']}</span>
+            </td>
+            <td id='botao_trash' tabindex="0">
                 <button id='btn-trash' onclick='removeConta("${contas[i]['conta']}")'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                         <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
