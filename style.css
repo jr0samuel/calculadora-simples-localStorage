@@ -102,7 +102,7 @@ h1 {
     height: 50px;
     cursor: pointer;
     transition: .4s;
-    margin: 5px 0px;
+    margin: 50% 0px;
 }
 #btn-trash:hover {
     background-color: rgb(146, 22, 17);
