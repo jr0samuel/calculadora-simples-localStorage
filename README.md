@@ -4,7 +4,7 @@ Veja a calculadora em ação nesse link
 https://codepen.io/jrSamuel-Jr/pen/xxvrKzb
 
 ou nesse link
-https://jsfiddle.net/j_r_Samuel_Jr/438gx6ar/22/
+https://jsfiddle.net/j_r_Samuel_Jr/438gx6ar/27/
 
 Nesse link tem dicas matemáticas e sobre a calculadora
 https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/15/
