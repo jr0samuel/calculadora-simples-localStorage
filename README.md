@@ -22,8 +22,7 @@ https://codepen.io/jrSamuel-Jr/pen/zYgwJmJ
 #
 #
 
-![Captura de tela 2024-10-29 215316](https://github.com/user-attachments/assets/59f5373f-092b-4c00-a503-0bd38863eea6)
-![Captura de tela 2024-10-29 215223](https://github.com/user-attachments/assets/d0119d70-0c5e-4163-a477-3cc946cb580d)
+![Captura de tela 2025-05-18 170507](https://github.com/user-attachments/assets/9ca27d4a-2cad-41c0-bd04-0eda1531e19c)
 
 https://github.com/user-attachments/assets/ebebee27-3bf6-47b9-8e1d-3420a6c8d92e
 
