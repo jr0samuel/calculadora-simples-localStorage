@@ -57,7 +57,7 @@ function showContas()
     {
         list.innerHTML += `<tr scope="row">
             <td id='resultado' onclick="addDisplay('${contas[i]['conta']}')" tabindex="0">
-                <span tabindex="0">${contas[i]['conta']}</span>
+                <span id='calculum' tabindex="0">${contas[i]['conta']}</span>
             </td>
             <td id='botao_trash' tabindex="0">
                 <button id='btn-trash' onclick='removeConta("${contas[i]['conta']}")'>
