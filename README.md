@@ -1,23 +1,22 @@
 # calculadora-simples-localStorage
 
-Veja a calculadora em ação nesse link
+Você pode ver o sistema no site:<br>
+https://calculadoracomdicas.vercel.app/
+<br><br>
+Se quiser ver o sistema junto com o código, há os links abaixo:<br>
 https://codepen.io/jrSamuel-Jr/pen/xxvrKzb
 
-ou nesse link
 https://jsfiddle.net/j_r_Samuel_Jr/438gx6ar/27/
-
-Nesse link tem dicas matemáticas e sobre a calculadora
-https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/15/
-
-Esse link também tem dicas
-https://codepen.io/jrSamuel-Jr/pen/ExqXPaw
-
-
-Veja outra versão dessa calculadora nesse link
+<br><br>
+Outra versão:<br>
 https://jsfiddle.net/j_r_Samuel_Jr/zk2s798f/10/
 
-ou nesse link
 https://codepen.io/jrSamuel-Jr/pen/zYgwJmJ
+<br><br>
+Aqui são dicas matemáticas e sobre a calculadora<br>
+https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/15/
+
+https://codepen.io/jrSamuel-Jr/pen/ExqXPaw
 
 #
 #
