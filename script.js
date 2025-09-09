@@ -10,8 +10,7 @@ function addInputToDisplay1() {
     display.value = valueDisplay + "("
 }
 function addInputToDisplay2() {
-    const valueDisplay = display.value
-    display.value = valueDisplay + ")"
+    display.value += ")"
 }
 function addInputForDisplay(v) {
     const valorTela = display.value
