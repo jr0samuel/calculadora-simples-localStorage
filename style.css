@@ -154,9 +154,6 @@ h1 {
     left: 0;
     bottom: -15px;
 }
-#tetra {
-    color:#666; background: none; font-style: italic; text-decoration: none; font-weight: bold;
-}
 #dicas-conteiner {
     max-height: 450px;
     overflow-x: scroll;
