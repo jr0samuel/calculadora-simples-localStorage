@@ -28,7 +28,6 @@
                             <input class="col valores" type="button" value="-" onclick="addInputToDisplay('-')">
                             <input class="col valores" type="button" value="*" onclick="addInputToDisplay('*')">
                             <input class="col valores" type="button" value="/" onclick="addInputToDisplay('/')">
-                            <input class="col valores" type="button" value="%" onclick="addInputToDisplay('%')">
                         </div>
                         <div class="row">
                             <input class="col abreparentese" type="button" value="(" onclick="addInputToDisplay1()">
@@ -77,26 +76,23 @@
     </div>
 
     <div style="display:none" id="messagesave" class="position-absolute top-0">
-        <div class="alert alert-success alerta">
+        <div class="alert alert-success">
             <div>
                 Salvo
-                <!-- <button class="btn btn-close fechar" data-bs-dismiss="alert"></button> -->
             </div>
         </div>
     </div>
     <div style="display:none" id="empty" class="position-absolute top-0">
-        <div class="alert alert-danger alerta">
+        <div class="alert alert-danger">
             <div>
                 Nada para Salvar
-                <!-- <button class="btn btn-close fechar" data-bs-dismiss="alert"></button> -->
             </div>
         </div>
     </div>
     <div style="display:none" id="vazio" class="position-absolute top-0">
-        <div class="alert alert-warning alerta">
+        <div class="alert alert-warning">
             <div>
                 Digite alguma conta para calcular o resultado
-                <!-- <button class="btn btn-close fechar" data-bs-dismiss="alert"></button> -->
             </div>
         </div>
     </div>
@@ -113,25 +109,25 @@
     <script>
             $("#save").on('click', () => {
                 const tela = $("#display").val();
-                $("#spacecalc").addClass("spaceforcalc")
+                $("#spacecalc").addClass("spaceforcalc");
                 if (tela) {
                     $("#messagesave").show(1250).fadeOut(5000);
                 } else {
                     $("#empty").show(1250).fadeOut(5000);
-                }
+                };
                 setTimeout( () => {
-                    $("#spacecalc").removeClass("spaceforcalc")
-                }, 5350)
+                    $("#spacecalc").removeClass("spaceforcalc");
+                }, 5350);
             });
             $("#equals").on('click', () => {
                 const telinha = $("#display").val();
-                if (telinha == '') {
-                    $("#spacecalc").addClass("spaceforcalc")
+                if (telinha === '') {
+                    $("#spacecalc").addClass("spaceforcalc");
                     $("#vazio").show(1250).fadeOut(5000);
-                }
+                };
                 setTimeout( () => {
-                    $("#spacecalc").removeClass("spaceforcalc")
-                }, 5350)
+                    $("#spacecalc").removeClass("spaceforcalc");
+                }, 5350);
             });
     </script>
 

@@ -7,16 +7,19 @@ https://calculadoracomdicas.vercel.app/
 Se quiser ver o sistema junto com o código, há os links abaixo:<br>
 https://codepen.io/jrSamuel-Jr/pen/xxvrKzb
 
-https://jsfiddle.net/j_r_Samuel_Jr/438gx6ar/30/
+https://jsfiddle.net/j_r_Samuel_Jr/438gx6ar/34/
 <br><br>
 Outra versão:<br>
-https://jsfiddle.net/j_r_Samuel_Jr/zk2s798f/10/
-
 https://codepen.io/jrSamuel-Jr/pen/zYgwJmJ
+
+https://jsfiddle.net/j_r_Samuel_Jr/zk2s798f/10/
 <br><br>
 Aqui tem dicas matemáticas e um pouco sobre a calculadora:<br>
-https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/19/
-
 https://codepen.io/jrSamuel-Jr/pen/ExqXPaw
 
+https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/23/
+
+#
+![alt text](captura_print.png)
+![alt text](captura-print.png)
 #
