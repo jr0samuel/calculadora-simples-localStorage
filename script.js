@@ -26,8 +26,13 @@ function addInputForDisplay(v) {
 }
 function calculate() {
     if (display.value === '') return
-    const result = eval(display.value)
-    display.value = result
+    try {
+        const result = math.evaluate(display.value);
+        display.value = result;
+    } catch (error) {
+        display.value = 'Error';
+        console.error('Expressão inválida:', error);
+    }
 }
 function removeLastInput() {
     display.value = display.value.slice(0, -1)
