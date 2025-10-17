@@ -20,7 +20,7 @@ https://codepen.io/jrSamuel-Jr/pen/ExqXPaw
 https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/31/
 
 #
-![imagem inicial da calculadora com histórico](captura__print-(1).png)
-![imagem com dicas matemáticas](captura__print-(2).png)
-![imagem com informações sobre a calculadora](captura__print-(3).png)
+![imagem inicial da calculadora com histórico](./assets/captura__print-(1).png)
+![imagem com dicas matemáticas](./assets/captura__print-(2).png)
+![imagem com informações sobre a calculadora](./assets/captura__print-(3).png)
 #
