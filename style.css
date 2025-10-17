@@ -1,4 +1,6 @@
+
 /* index.html */
+
 :root {
     --color-dark: rgb(14, 14, 14);
     --color-dark2: rgb(32, 32, 32);
@@ -25,12 +27,6 @@ h1 {
     text-align: center;
     word-break: break-word;
     padding: 10px 10px 0px 10px;
-}
-.spaceforcalc {
-    margin-top: 50px;
-}
-#messagesave, #empty, #vazio {
-    margin-top: 60px;
 }
 #calc5 {
     border: 1px solid white;
@@ -135,7 +131,8 @@ h1 {
 }
 
 /* dicas.html */
-#botao-voltar {
+
+#span-topo {
     color: var(--color-dark);
     text-align: center;
     text-decoration: none;
@@ -144,7 +141,7 @@ h1 {
     background: gray;
     height: 30px;
 }
-#botao-voltar::after {
+#span-topo::after {
     content: "";
     display: block;
     position: absolute;

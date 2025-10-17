@@ -24,10 +24,11 @@
                             <a id="botao-dicas" class="col" href="dicas.html" target="_blank" rel="noreferrer noopener">Sobre a Calculadora e Dicas Matemáticas</a>
                         </div>
                         <div class="row">
-                            <input class="col valores" type="button" value="+" onclick="addInputToDisplay('+')">
-                            <input class="col valores" type="button" value="-" onclick="addInputToDisplay('-')">
-                            <input class="col valores" type="button" value="*" onclick="addInputToDisplay('*')">
-                            <input class="col valores" type="button" value="/" onclick="addInputToDisplay('/')">
+                            <input class="col valores" type="button" value="+" onclick="addInputToDisplay(' + ')">
+                            <input class="col valores" type="button" value="-" onclick="addInputToDisplay(' - ')">
+                            <input class="col valores" type="button" value="*" onclick="addInputToDisplay(' * ')">
+                            <input class="col valores" type="button" value="/" onclick="addInputToDisplay(' / ')">
+                            <input class="col valores expoente" type="button" value="^" onclick="addInputToDisplay(' ^ ')">
                         </div>
                         <div class="row">
                             <input class="col abreparentese" type="button" value="(" onclick="addInputToDisplay1()">
@@ -53,13 +54,15 @@
                             <input class="col valores" type="button" value="9" onclick="addInputToDisplay('9')">
                         </div>
                         <div class="row">
-                            <input class="col" type="button" value="Salvar" id="save" onclick="addInputToHistory()">
+                            <!-- <input class="col" type="button" value="Salvar" id="save" onclick="addInputToHistory()"> -->
                             <input class="col valores" type="button" value="0" onclick="addInputToDisplay('0')">
                             <input class="col valores" type="button" value="." onclick="addInputToDisplay('.')">
-                            <input class="col" type="button" value="Limpar" id="del" onclick="removeLastInput()">
                         </div>
                         <div class="row">
                             <input class="col" type="button" value="=" id="equals" onclick="calculate()">
+                        </div>
+                        <div class="row">
+                            <input class="col" type="button" value="Limpar" id="del" onclick="removeLastInput()">
                             <input class="col" type="button" value="Apagar" id="reset" onclick="resetDisplay()">
                         </div>
                         <div id="store" class="row">
@@ -75,28 +78,6 @@
         </div>
     </div>
 
-    <div style="display:none" id="messagesave" class="position-absolute top-0">
-        <div class="alert alert-success">
-            <div>
-                Salvo
-            </div>
-        </div>
-    </div>
-    <div style="display:none" id="empty" class="position-absolute top-0">
-        <div class="alert alert-danger">
-            <div>
-                Nada para Salvar
-            </div>
-        </div>
-    </div>
-    <div style="display:none" id="vazio" class="position-absolute top-0">
-        <div class="alert alert-warning">
-            <div>
-                Digite alguma conta para calcular o resultado
-            </div>
-        </div>
-    </div>
-
     <script src="script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -107,31 +88,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.7.0/math.min.js"></script>
-
-    <script>
-            $("#save").on('click', () => {
-                const tela = $("#display").val();
-                $("#spacecalc").addClass("spaceforcalc");
-                if (tela) {
-                    $("#messagesave").show(1250).fadeOut(5000);
-                } else {
-                    $("#empty").show(1250).fadeOut(5000);
-                };
-                setTimeout( () => {
-                    $("#spacecalc").removeClass("spaceforcalc");
-                }, 5350);
-            });
-            $("#equals").on('click', () => {
-                const telinha = $("#display").val();
-                if (telinha === '') {
-                    $("#spacecalc").addClass("spaceforcalc");
-                    $("#vazio").show(1250).fadeOut(5000);
-                };
-                setTimeout( () => {
-                    $("#spacecalc").removeClass("spaceforcalc");
-                }, 5350);
-            });
-    </script>
 
 </body>
 
