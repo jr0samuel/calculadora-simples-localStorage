@@ -13,6 +13,8 @@
 }
 body {
     font-family: 'Poetsen One';
+    font-family: 'Poiret One';
+    font-family: 'Lora';
     background-color: var(--color-dark);
     color: var(--color-white);
     display: flex;
