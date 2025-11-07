@@ -7,34 +7,34 @@ function addInputToDisplay(input) {
 }
 function addInputToDisplay1() {
     const valueDisplay = display.value
-    display.value = valueDisplay + " ( "
+    display.value = valueDisplay + "("
 }
 function addInputToDisplay2() {
-    display.value += " ) "
+    display.value += ")"
 }
 function addInputForDisplay(v) {
     const valorTela = display.value
     if (v == 1) {
-        display.value = valorTela + " [ ";
+        display.value = valorTela + "[";
     } else if (v == 2) {
-        display.value = valorTela + " ] ";
+        display.value = valorTela + "]";
     } else if (v == 3) {
-        display.value = valorTela + " { ";
+        display.value = valorTela + "{";
     } else if (v == 4) {
-        display.value = valorTela + " } ";
+        display.value = valorTela + "}";
     }
 }
 function calculate() {
-    let espaco = "\u2003"
     if (display.value === '') return
     try {
         const result = math.evaluate(display.value);
         display.value += ` = ${result}`;
         addInputToHistory();
     } catch (error) {
-        display.value += ` ${espaco} Conta inválida`;
-        console.error('Expressão inválida:', error);
-        console.log('Expressão inválida:', error);
+        display.value
+        $("#invalidmsg").show(1500).fadeOut(7000);
+        console.error('Expressão inválida error:', error);
+        console.log('Expressão inválida log:', error);
     }
 }
 function removeLastInput() {

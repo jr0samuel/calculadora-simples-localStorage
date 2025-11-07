@@ -28,7 +28,10 @@ h1 {
     color: tan;
     text-align: center;
     word-break: break-word;
-    padding: 10px 10px 0px 10px;
+    padding-top: 10px;
+}
+#spaceh1 {
+    margin-bottom: -15px;
 }
 #calc5 {
     border: 1px solid white;
@@ -157,4 +160,10 @@ h1 {
     max-height: 450px;
     overflow-x: scroll;
     scrollbar-width: none;
+}
+#espacoh1 {
+    margin-bottom: -7.5px;
+}
+.box {
+    margin-bottom: -5px;
 }
