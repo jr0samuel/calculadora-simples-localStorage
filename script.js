@@ -32,7 +32,7 @@ function calculate() {
         addInputToHistory();
     } catch (error) {
         display.value
-        $("#invalidmsg").show(1500).fadeOut(7000);
+        $("#invalidmsg").stop(true, true).show(1000).fadeOut(7500);
         console.error('Expressão inválida error:', error);
         console.log('Expressão inválida log:', error);
     }
