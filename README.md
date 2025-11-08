@@ -1,5 +1,5 @@
 #
-# calculadora-simples-localStorage
+# Calculadora simples com dicas matemáticas e histórico
 
 Você pode ver o sistema no site:<br>
 https://calculadoracomdicas.vercel.app/
