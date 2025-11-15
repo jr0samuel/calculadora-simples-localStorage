@@ -18,51 +18,62 @@
                 <div id="calc4" class="calc-keys">
                     <div id="calc5" class="container">
                         <div id="calc3" class="calc-top-result row">
-                            <input type="text" class="col-12" id="display" placeholder="">
+                            <input class="col-12" id="display">
                         </div>
                         <div class="row">
-                            <a id="botao-dicas" class="col" href="dicas.html" target="_blank" rel="noreferrer noopener">Sobre a Calculadora e Dicas Matemáticas</a>
+                            <a id="botao-dicas" class="col" href="dicas.html" target="_blank" rel="noreferrer noopener">Dicas Matemáticas</a>
                         </div>
                         <div class="row">
-                            <input class="col valores" type="button" value="+" onclick="addInputToDisplay(' + ')">
-                            <input class="col valores" type="button" value="-" onclick="addInputToDisplay(' - ')">
-                            <input class="col valores" type="button" value="*" onclick="addInputToDisplay(' * ')">
-                            <input class="col valores" type="button" value="/" onclick="addInputToDisplay(' / ')">
-                            <input class="col valores expoente" type="button" value="^" onclick="addInputToDisplay(' ^ ')">
+                            <input id="botaoFoco" class="col" type="button" value="Focar no Visor">
+                            <input id="botaoDesfoco" class="col" type="button" value="Tirar foco do Visor">
                         </div>
                         <div class="row">
-                            <input class="col abreparentese" type="button" value="(" onclick="addInputToDisplay1()">
-                            <input class="col fechaparentese" type="button" value=")" onclick="addInputToDisplay2()">
-                            <input class="col sinal 1 abrecolchete" type="button" value="[" onclick="addInputForDisplay(1)">
-                            <input class="col sinal 2 fechacolchete" type="button" value="]" onclick="addInputForDisplay(2)">
-                            <input class="col sinal 3 abrechave" type="button" value="{" onclick="addInputForDisplay(3)">
-                            <input class="col sinal 4 fechachave" type="button" value="}" onclick="addInputForDisplay(4)">
+                            <input class="col" type="button" value="+" onclick="addInputToDisplay(' + ')">
+                            <input class="col" type="button" value="-" onclick="addInputToDisplay(' - ')">
+                            <input class="col" type="button" value="*" onclick="addInputToDisplay(' * ')">
+                            <input class="col" type="button" value="/" onclick="addInputToDisplay(' / ')">
+                            <input class="col" type="button" value="^" onclick="addInputToDisplay('^')">
                         </div>
                         <div class="row">
-                            <input class="col valores" type="button" value="1" onclick="addInputToDisplay('1')">
+                            <input class="col" type="button" value="(" onclick="addInputToDisplay1()">
+                            <input class="col" type="button" value=")" onclick="addInputToDisplay2()">
+                            <input class="col" type="button" value="[" onclick="addInputForDisplay(1)">
+                            <input class="col" type="button" value="]" onclick="addInputForDisplay(2)">
+                            <input class="col" type="button" value="{" onclick="addInputForDisplay(3)">
+                            <input class="col" type="button" value="}" onclick="addInputForDisplay(4)">
+                        </div>
+                        <div class="row">
+                            <input class="col" type="button" value="1" onclick="addInputToDisplay('1')">
                             <input class="col" type="button" value="2" onclick="addInputToDisplay('2')">
                             <input class="col" type="button" value="3" onclick="addInputToDisplay('3')">
                         </div>
                         <div class="row">
-                            <input class="col valores" type="button" value="4" onclick="addInputToDisplay('4')">
-                            <input class="col valores" type="button" value="5" onclick="addInputToDisplay('5')">
-                            <input class="col valores" type="button" value="6" onclick="addInputToDisplay('6')">
+                            <input class="col" type="button" value="4" onclick="addInputToDisplay('4')">
+                            <input class="col" type="button" value="5" onclick="addInputToDisplay('5')">
+                            <input class="col" type="button" value="6" onclick="addInputToDisplay('6')">
                         </div>
                         <div class="row">
-                            <input class="col valores" type="button" value="7" onclick="addInputToDisplay('7')">
-                            <input class="col valores" type="button" value="8" onclick="addInputToDisplay('8')">
-                            <input class="col valores" type="button" value="9" onclick="addInputToDisplay('9')">
+                            <input class="col" type="button" value="7" onclick="addInputToDisplay('7')">
+                            <input class="col" type="button" value="8" onclick="addInputToDisplay('8')">
+                            <input class="col" type="button" value="9" onclick="addInputToDisplay('9')">
                         </div>
                         <div class="row">
-                            <input class="col valores" type="button" value="0" onclick="addInputToDisplay('0')">
-                            <input class="col valores" type="button" value="." onclick="addInputToDisplay('.')">
+                            <input class="col" type="button" value="0" onclick="addInputToDisplay('0')">
+                            <input class="col" type="button" value="." onclick="addInputToDisplay('.')">
                         </div>
                         <div class="row">
-                            <input class="col" type="button" value="=" id="equals" onclick="calculate()">
+                            <input class="col" type="button" value="=" onclick="calculate()">
                         </div>
                         <div class="row">
-                            <input class="col" type="button" value="Limpar" id="del" onclick="removeLastInput()">
-                            <input class="col" type="button" value="Apagar" id="reset" onclick="resetDisplay()">
+                            <input class="col" type="button" value="Limpar Último" onclick="removeLastInput()">
+                            <input class="col" type="button" value="BackSpace" onclick="botaoBackspace()">
+                            <input class="col" type="button" value="Apagar Tudo" onclick="resetDisplay()">
+                        </div>
+                        <div class="row">
+                            <input id="botaoHome" class="col" type="button" value="Começo">
+                            <input id="botaoLeft" class="col" type="button" value="&lt;" onclick="setaEsquerda()">
+                            <input id="botaoRight" class="col" type="button" value=">" onclick="setaDireita()">
+                            <input id="botaoEnd" class="col" type="button" value="Fim">
                         </div>
                         <div id="store" class="row">
                             <h3 id="history">Histórico</h3>

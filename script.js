@@ -30,11 +30,9 @@ function calculate() {
         const result = math.evaluate(display.value);
         display.value += ` = ${result}`;
         addInputToHistory();
-    } catch (error) {
+    } catch {
         display.value
         $("#invalidmsg").stop(true, true).show(1000).fadeOut(7500);
-        console.error('Expressão inválida error:', error);
-        console.log('Expressão inválida log:', error);
     }
 }
 function removeLastInput() {
@@ -90,3 +88,38 @@ function removeConta(data)
     showContas()
 }
 showContas()
+
+function setaEsquerda() {
+    let pos = display.selectionStart;
+    if (pos > 0) pos -= 1;
+    display.selectionStart = display.selectionEnd = pos;
+    display.focus();
+}
+function setaDireita() {
+    display.selectionStart = display.selectionEnd = Math.min(display.selectionEnd + 1, display.value.length);
+    display.focus();
+}
+function botaoComeco() {
+    display.selectionStart = display.selectionEnd = 0;
+    display.focus();
+}
+function botaoFim() {
+    display.selectionStart = selectionEnd = display.value.length;
+    display.focus();
+}
+document.getElementById('botaoEnd').addEventListener('click', botaoFim);
+document.getElementById('botaoHome').addEventListener('click', botaoComeco);
+function botaoBackspace(){
+    let startPos = display.selectionStart;
+    let endPos = display.selectionEnd;
+    if (startPos === endPos && startPos > 0) {
+        display.value = display.value.slice(0, startPos - 1) + display.value.slice(endPos);
+        display.selectionStart = display.selectionEnd = startPos - 1;
+    } else if (startPos !== endPos) {
+        display.value = display.value.slice(0, startPos) + display.value.slice(endPos);
+        display.selectionStart = display.selectionEnd = startPos;
+    }
+    display.focus();
+}
+document.getElementById('botaoFoco').addEventListener('click', () => { document.getElementById('display').focus() })
+/**/document.getElementById('botaoDesfoco').addEventListener('click', () => { document.getElementById('display').blur() })//
