@@ -115,6 +115,10 @@ h1 {
     margin-left: 5px;
     margin-right: 3px;
 }
+#btn-trash:hover {
+    background-color: var(--color-red);
+}
+
 @media screen and (min-width: 940px) and (max-width: 991px) {
     #btn-trash
     { margin-left: 10px;
@@ -124,8 +128,30 @@ h1 {
     #btn-trash {
     margin-left: 5px; margin-right: 2px; }
 }
-#btn-trash:hover {
-    background-color: var(--color-red);
+
+@media screen and (max-width:470px) {
+    .last {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+}
+@media screen and ( max-width: 410px ) {
+    .back {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+@media screen and ( max-width: 391px ) {
+    .back {
+        padding-left: 21px;
+        padding-right: 21px;
+    }
+}
+@media screen and ( max-width: 380px ) {
+    .back {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
 }
 
 #botao-dicas {
