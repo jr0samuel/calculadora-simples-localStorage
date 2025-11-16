@@ -21,5 +21,5 @@ https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/42/
 
 #
 ![tela inicial da calculadora com histórico](./assets/captura__print-(1).png)
-![dicas matemáticas](./assets/captura__print-(2).png)
+![tela com as dicas matemáticas](./assets/captura__print-(2).png)
 #
