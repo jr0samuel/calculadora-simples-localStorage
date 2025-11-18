@@ -24,8 +24,10 @@
                             <a id="botao-dicas" class="col tab" href="dicas.html" target="_blank" rel="noreferrer noopener" tabindex="-1">Dicas Matemáticas</a>
                         </div>
                         <div class="row">
-                            <input id="botaoFoco" class="col tab" type="button" value="Focar no Visor" tabindex="-1">
-                            <input id="botaoDesfoco" class="col tab" type="button" value="Tirar foco do Visor" tabindex="-1">
+                            <input id="botaoHome" class="col tab" type="button" value="Começo" tabindex="-1">
+                            <input id="botaoLeft" class="col tab" type="button" value="&lt;" onclick="setaEsquerda()" tabindex="-1">
+                            <input id="botaoRight" class="col tab" type="button" value=">" onclick="setaDireita()" tabindex="-1">
+                            <input id="botaoEnd" class="col tab" type="button" value="Fim" tabindex="-1">
                         </div>
                         <div class="row">
                             <input class="col tab" type="button" value="+" onclick="addInputToDisplay(' + ')" tabindex="-1">
@@ -65,22 +67,15 @@
                             <input class="col tab" type="button" value="=" onclick="calculate()" tabindex="-1">
                         </div>
                         <div class="row">
+                            <input class="col tab" type="button" value="Apagar Tudo" onclick="resetDisplay()" tabindex="-1">
                             <input class="col tab back" type="button" value="BackSpace" onclick="botaoBackspace()" tabindex="-1">
-                            <input class="col tab" type="button" value="Apagar" onclick="resetDisplay()" tabindex="-1">
-                            <input class="col tab last" type="button" value="Limpar Último" onclick="removeLastInput()" tabindex="-1">
                         </div>
-                        <div class="row">
-                            <input id="botaoHome" class="col tab" type="button" value="Começo" tabindex="-1">
-                            <input id="botaoLeft" class="col tab" type="button" value="&lt;" onclick="setaEsquerda()" tabindex="-1">
-                            <input id="botaoRight" class="col tab" type="button" value=">" onclick="setaDireita()" tabindex="-1">
-                            <input id="botaoEnd" class="col tab" type="button" value="Fim" tabindex="-1">
-                        </div>
-                        <div id="store" class="row">
+                        <div id="store" class="row" tabindex="-1">
                             <h3 id="history">Histórico</h3>
                         </div>
                         <br>
                         <div id="tabela" class="row" tabindex="-1">
-                            <table id="storage" class="table"></table>
+                            <table id="storage" class="table" tabindex="-1"></table>
                         </div>
                     </div>
                 </div>

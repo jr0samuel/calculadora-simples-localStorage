@@ -37,9 +37,6 @@ function calculate() {
 }
 document.addEventListener('keydown',function(e){if(e.key==='Enter'){calculate()}});
 $('.tab').on('click',()=>{$('.tab').blur()});
-function removeLastInput() {
-    display.value = display.value.slice(0, -1)
-}
 function resetDisplay() {
     display.value = ""
 }
@@ -62,12 +59,12 @@ function showContas()
     list.innerHTML = ""
     for(let i = 0; i < contas.length; i++)
     {
-        list.innerHTML += `<tr scope="row">
+        list.innerHTML += `<tr scope="row" tabindex="-1">
             <td id='resultado' onclick="addDisplay('${contas[i]['conta']}')" tabindex="-1">
-                <span id='calculum'>${contas[i]['conta']}</span>
+                <span tabindex="0" id='calculum'>${contas[i]['conta']}</span>
             </td>
             <td id='botao_trash' tabindex="-1">
-                <button tabindex="-1" id='btn-trash' onclick='removeConta("${contas[i]['conta']}")'>
+                <button tabindex="0" id='btn-trash' onclick='removeConta("${contas[i]['conta']}")'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
                         <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
@@ -77,6 +74,38 @@ function showContas()
         </tr>
         <hr class="taghr" style="opacity:0 !important">`;
     }
+
+    const calculumEls = list.querySelectorAll('#calculum');
+    calculumEls.forEach(el => {
+        el.tabIndex = 0;
+        el.addEventListener('keydown', function(e) {
+            const isSpace = e.key === ' ' || e.code === 'Space' || e.key === 'Spacebar' || e.keyCode === 32;
+            if (isSpace) {
+                e.preventDefault();
+                display.value = el.textContent.trim();
+            } else if (e.key === 'Enter') {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+        el.addEventListener('click', () => { display.value = el.textContent.trim(); });
+    });
+
+    const trashBtns = list.querySelectorAll('#btn-trash');
+    trashBtns.forEach(btn => {
+        btn.tabIndex = 0;
+        btn.addEventListener('keydown', function(e) {
+            const isSpace = e.key === ' ' || e.code === 'Space' || e.key === 'Spacebar' || e.keyCode === 32;
+            if (isSpace) {
+                e.preventDefault();
+                btn.click();
+            } else if (e.key === 'Enter') {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+    });
+
 }
 function addDisplay(resultado) {
     display.value = resultado
@@ -123,5 +152,3 @@ function botaoBackspace(){
     }
     display.focus();
 }
-document.getElementById('botaoFoco').addEventListener('click', () => { document.getElementById('display').focus() })
-/**/document.getElementById('botaoDesfoco').addEventListener('click', () => { document.getElementById('display').blur() })//
