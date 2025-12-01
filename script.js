@@ -14,9 +14,9 @@ function addInputToDisplay2() {
 }
 function addInputForDisplay(v) {
     const valorTela = display.value
-    if (v == 1) {
+    if (v === 1) {
         display.value = valorTela + "[";
-    } else if (v == 2) {
+    } else if (v === 2) {
         display.value = valorTela + "]";
     } else if (v == 3) {
         display.value = valorTela + "{";
@@ -35,8 +35,37 @@ function calculate() {
         $("#invalidmsg").stop(true, true).show(1000).fadeOut(7500);
     }
 }
-document.addEventListener('keydown',function(e){if(e.key==='Enter'){calculate()}});
-$('.tab').on('click',()=>{$('.tab').blur()});
+document.addEventListener('keydown',function(e){if(e.key==='Enter'){calculate();};});
+
+$('.tab').on('click',()=>{$('.col').blur();});
+$('.tab').on('touchstart',e=>{e.preventDefault();});$('.tab').on('touchend',e=>{e.target.click();});
+
+const historyContainer = document.getElementById('storage');
+historyContainer.addEventListener('touchstart', function(e) {
+    if (e.target && e.target.id === 'resultado' || e.target.id === 'calculum') {
+        e.preventDefault();
+    };
+});
+historyContainer.addEventListener('touchend', function(e) {
+    if (e.target && e.target.id === 'resultado' || e.target.id === 'calculum') {
+        display.value = e.target.textContent.trim();
+    };
+});
+historyContainer.addEventListener('touchstart', function(e) {
+    if (e.target && e.target.id === 'btn-trash' || e.target.id === 'svg-trash') {
+        const btn = e.target.id === 'btn-trash' ? e.target : e.target.closest('#btn-trash');
+        e.preventDefault();
+        btn.style.backgroundColor = 'var(--color-red)';
+    }
+})
+historyContainer.addEventListener('touchend', function(e) {
+    if (e.target && e.target.id === 'btn-trash' || e.target.id === 'svg-trash') {
+        const btn = e.target.id === 'btn-trash' ? e.target : e.target.closest('#btn-trash');
+        btn.click();
+        btn.style.backgroundColor = 'var(--color-grey)';
+    }
+})
+
 function resetDisplay() {
     display.value = ""
 }
@@ -57,7 +86,7 @@ function showContas()
     let contas = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
     let list = document.getElementById('storage')
     list.innerHTML = ""
-    for(let i = 0; i < contas.length; i++)
+    for(let i=0; i<contas.length; i++)
     {
         list.innerHTML += `<tr scope="row" tabindex="-1">
             <td id='resultado' onclick="addDisplay('${contas[i]['conta']}')" tabindex="-1">
@@ -65,7 +94,7 @@ function showContas()
             </td>
             <td id='botao_trash' tabindex="-1">
                 <button tabindex="0" id='btn-trash' onclick='removeConta("${contas[i]['conta']}")'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                    <svg id='svg-trash' xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
                         <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
                     </svg>
@@ -107,6 +136,7 @@ function showContas()
     });
 
 }
+
 function addDisplay(resultado) {
     display.value = resultado
 }

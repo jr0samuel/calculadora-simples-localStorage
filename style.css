@@ -13,6 +13,7 @@
     --color-blue2: cadetblue;
     --color-red: rgb(146, 22, 17);
     --color-grey: rgb(119, 117, 117);
+    --color-grey2: rgb(163, 159, 159);
 }
 body {
     font-family: 'Poetsen One';
@@ -26,7 +27,7 @@ body {
     gap: 1rem;
     margin-bottom: 50px;
 }
-#resultado { cursor: grabbing; width: 85%; }
+#resultado { cursor: grab; width: 85%; }
 h1 {
     color: var(--color-tan);
     text-align: center;
@@ -114,6 +115,7 @@ h1 {
     transition: .4s;
     margin-left: 5px;
     margin-right: 3px;
+    cursor: grabbing;
 }
 #btn-trash:hover, #btn-trash:focus {
     background-color: var(--color-red);
@@ -136,6 +138,9 @@ h1 {
     text-align: center;
     padding: 5px 0px;
     border: var(--color-dark) 1px solid;
+}
+#botao-dicas:hover {
+    background: var(--color-grey2);
 }
 
 /* dicas.html */
