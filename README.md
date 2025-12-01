@@ -21,5 +21,5 @@ https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/44/
 
 #
 ![tela inicial da calculadora](./assets/captura__print-(1).png)
-![tela com as dicas](./assets/captura__print-(2).png)
+![tela com dicas](./assets/captura__print-(2).png)
 #
