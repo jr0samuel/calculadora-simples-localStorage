@@ -140,6 +140,7 @@ h1 {
     text-align: center;
     padding: 5px 0px;
     border: var(--color-dark) 1px solid;
+    cursor: default;
 }
 #botao-dicas:hover {
     background: var(--color-grey2);
