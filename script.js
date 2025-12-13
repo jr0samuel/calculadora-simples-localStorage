@@ -15,11 +15,11 @@ function addInputToDisplay2() {
 function addInputForDisplay(v) {
     const valorTela = display.value
     if (v === 1) {
-        display.value = valorTela + "[";
+        display.value += "[";
     } else if (v === 2) {
         display.value = valorTela + "]";
     } else if (v == 3) {
-        display.value = valorTela + "{";
+        display.value += "{";
     } else if (v == 4) {
         display.value = valorTela + "}";
     }
