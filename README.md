@@ -7,7 +7,7 @@ https://calculadoracomdicas.vercel.app/
 Se quiser ver o sistema junto com o código, há os links abaixo:<br>
 https://codepen.io/jrSamuel-Jr/pen/xxvrKzb
 
-https://jsfiddle.net/j_r_Samuel_Jr/438gx6ar/50/
+https://jsfiddle.net/j_r_Samuel_Jr/438gx6ar/51/
 <br><br>
 Outra versão:<br>
 https://codepen.io/jrSamuel-Jr/pen/zYgwJmJ
@@ -17,7 +17,7 @@ https://jsfiddle.net/j_r_Samuel_Jr/zk2s798f/10/
 Aqui as dicas:<br>
 https://codepen.io/jrSamuel-Jr/pen/ExqXPaw
 
-https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/44/
+https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/45/
 
 #
 ![tela inicial da calculadora](./assets/captura__print.png)
