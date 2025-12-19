@@ -1,45 +1,41 @@
 const localStorageKey = 'contas-salvas'
 const display = document.querySelector('#display');
-
-function addInputToDisplay(input) {
-    const displayValue = display.value
-    display.value = displayValue + input
-}
-function addInputToDisplay1() {
-    const valueDisplay = display.value
-    display.value = valueDisplay + "("
-}
-function addInputToDisplay2() {
-    display.value += ")"
-}
-function addInputForDisplay(v) {
-    const valorTela = display.value
-    if (v === 1) {
-        display.value += "[";
-    } else if (v === 2) {
-        display.value = valorTela + "]";
-    } else if (v == 3) {
-        display.value += "{";
-    } else if (v == 4) {
-        display.value = valorTela + "}";
+function insertAtCursor(n) {
+    if (display) {
+        const start = display.selectionStart;
+        const end = display.selectionEnd;
+        display.setRangeText(n, start, end, 'end');
+        display.focus();
+    } else {
+        console.error('Display not found.');
     }
 }
 function calculate() {
-    if (display.value === '') return
     try {
-        const result = math.evaluate(display.value);
-        display.value += ` = ${result}`;
-        addInputToHistory();
+        if (display.value === '') {
+            $("#emptymsg").stop(true, true).show(1000).fadeOut(7500);
+        } else {
+            const result = math.evaluate(display.value);
+            display.value += ` = ${result}`;
+            addInputToHistory();
+            $("#savedmsg").stop(true, true).show(1000).fadeOut(7500);
+        }
     } catch {
         display.value
         $("#invalidmsg").stop(true, true).show(1000).fadeOut(7500);
     }
 }
 document.addEventListener('keydown',function(e){if(e.key==='Enter'){calculate();};});
-
+function save(){
+    if (display.value === "") {
+        $("#blankmsg").stop(true, true).show(1000).fadeOut(7500);
+    } else {
+        addInputToHistory();
+        $("#savemsg").stop(true, true).show(1000).fadeOut(7500);
+    }
+};
 $('.tab').on('click',()=>{$('.col').blur();});
 $('.tab').on('touchstart',e=>{e.preventDefault();});$('.tab').on('touchend',e=>{e.target.click();});
-
 const historyContainer = document.getElementById('storage');
 historyContainer.addEventListener('touchstart', function(e) {
     if (e.target && e.target.id === 'resultado' || e.target.id === 'calculum') {
@@ -65,7 +61,6 @@ historyContainer.addEventListener('touchend', function(e) {
         btn.style.backgroundColor = 'var(--color-grey)';
     }
 })
-
 function resetDisplay() {
     display.value = ""
 }
@@ -136,7 +131,6 @@ function showContas()
     });
 
 }
-
 function addDisplay(resultado) {
     display.value = resultado
 }
@@ -147,9 +141,9 @@ function removeConta(data)
     contas.splice(indice,1)
     localStorage.setItem(localStorageKey, JSON.stringify(contas))
     showContas()
+    $("#trashmsg").stop(true, true).show(1000).fadeOut(7500);
 }
 showContas()
-
 function setaEsquerda() {
     let pos = display.selectionStart;
     if (pos > 0) pos -= 1;

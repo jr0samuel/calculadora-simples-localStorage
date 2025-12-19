@@ -30,45 +30,46 @@
                             <input id="botaoEnd" class="col tab" type="button" value="Fim" tabindex="-1">
                         </div>
                         <div class="row">
-                            <input class="col tab" type="button" value="+" onclick="addInputToDisplay(' + ')" tabindex="-1">
-                            <input class="col tab" type="button" value="-" onclick="addInputToDisplay(' - ')" tabindex="-1">
-                            <input class="col tab" type="button" value="*" onclick="addInputToDisplay(' * ')" tabindex="-1">
-                            <input class="col tab" type="button" value="/" onclick="addInputToDisplay(' / ')" tabindex="-1">
-                            <input class="col tab" type="button" value="^" onclick="addInputToDisplay('^')" tabindex="-1">
+                            <input class="col tab" type="button" value="+" onclick="insertAtCursor(' + ')" tabindex="-1">
+                            <input class="col tab" type="button" value="-" onclick="insertAtCursor(' - ')" tabindex="-1">
+                            <input class="col tab" type="button" value="*" onclick="insertAtCursor(' * ')" tabindex="-1">
+                            <input class="col tab" type="button" value="/" onclick="insertAtCursor(' / ')" tabindex="-1">
+                            <input class="col tab" type="button" value="^" onclick="insertAtCursor('^')" tabindex="-1">
                         </div>
                         <div class="row">
-                            <input class="col tab" type="button" value="(" onclick="addInputToDisplay1()" tabindex="-1">
-                            <input class="col tab" type="button" value=")" onclick="addInputToDisplay2()" tabindex="-1">
-                            <input class="col tab" type="button" value="[" onclick="addInputForDisplay(1)" tabindex="-1">
-                            <input class="col tab" type="button" value="]" onclick="addInputForDisplay(2)" tabindex="-1">
-                            <input class="col tab" type="button" value="{" onclick="addInputForDisplay(3)" tabindex="-1">
-                            <input class="col tab" type="button" value="}" onclick="addInputForDisplay(4)" tabindex="-1">
+                            <input class="col tab" type="button" value="(" onclick="insertAtCursor('(')" tabindex="-1">
+                            <input class="col tab" type="button" value=")" onclick="insertAtCursor(')')" tabindex="-1">
+                            <input class="col tab" type="button" value="[" onclick="insertAtCursor('[')" tabindex="-1">
+                            <input class="col tab" type="button" value="]" onclick="insertAtCursor(']')" tabindex="-1">
+                            <input class="col tab" type="button" value="{" onclick="insertAtCursor('{')" tabindex="-1">
+                            <input class="col tab" type="button" value="}" onclick="insertAtCursor('}')" tabindex="-1">
                         </div>
                         <div class="row">
-                            <input class="col tab" type="button" value="1" onclick="addInputToDisplay('1')" tabindex="-1">
-                            <input class="col tab" type="button" value="2" onclick="addInputToDisplay('2')" tabindex="-1">
-                            <input class="col tab" type="button" value="3" onclick="addInputToDisplay('3')" tabindex="-1">
+                            <input class="col tab" type="button" value="1" onclick="insertAtCursor('1')" tabindex="-1">
+                            <input class="col tab" type="button" value="2" onclick="insertAtCursor('2')" tabindex="-1">
+                            <input class="col tab" type="button" value="3" onclick="insertAtCursor('3')" tabindex="-1">
                         </div>
                         <div class="row">
-                            <input class="col tab" type="button" value="4" onclick="addInputToDisplay('4')" tabindex="-1">
-                            <input class="col tab" type="button" value="5" onclick="addInputToDisplay('5')" tabindex="-1">
-                            <input class="col tab" type="button" value="6" onclick="addInputToDisplay('6')" tabindex="-1">
+                            <input class="col tab" type="button" value="4" onclick="insertAtCursor('4')" tabindex="-1">
+                            <input class="col tab" type="button" value="5" onclick="insertAtCursor('5')" tabindex="-1">
+                            <input class="col tab" type="button" value="6" onclick="insertAtCursor('6')" tabindex="-1">
                         </div>
                         <div class="row">
-                            <input class="col tab" type="button" value="7" onclick="addInputToDisplay('7')" tabindex="-1">
-                            <input class="col tab" type="button" value="8" onclick="addInputToDisplay('8')" tabindex="-1">
-                            <input class="col tab" type="button" value="9" onclick="addInputToDisplay('9')" tabindex="-1">
+                            <input class="col tab" type="button" value="7" onclick="insertAtCursor('7')" tabindex="-1">
+                            <input class="col tab" type="button" value="8" onclick="insertAtCursor('8')" tabindex="-1">
+                            <input class="col tab" type="button" value="9" onclick="insertAtCursor('9')" tabindex="-1">
                         </div>
                         <div class="row">
-                            <input class="col tab" type="button" value="0" onclick="addInputToDisplay('0')" tabindex="-1">
-                            <input class="col tab" type="button" value="." onclick="addInputToDisplay('.')" tabindex="-1">
+                            <input class="col tab" type="button" value="0" onclick="insertAtCursor('0')" tabindex="-1">
+                            <input class="col tab" type="button" value="." onclick="insertAtCursor('.')" tabindex="-1">
                         </div>
                         <div class="row">
                             <input class="col tab" type="button" value="=" onclick="calculate()" tabindex="-1">
                         </div>
                         <div class="row">
                             <input class="col tab" type="button" value="Apagar Tudo" onclick="resetDisplay()" tabindex="-1">
-                            <input class="col tab back" type="button" value="BackSpace" onclick="botaoBackspace()" tabindex="-1">
+                            <input class="col tab" type="button" value="Salvar" onclick="save()" tabindex="-1">
+                            <input class="col tab" type="button" value="BackSpace" onclick="botaoBackspace()" tabindex="-1">
                         </div>
                         <div id="store" class="row" tabindex="-1">
                             <h3 id="history">Histórico</h3>
@@ -87,6 +88,41 @@
         <div class="alert alert-danger">
             <div>
                 Conta Inválida
+            </div>
+        </div>
+    </div>
+    <div style="display:none" id="savedmsg" class="position-absolute top-0 pt-5">
+        <div class="alert alert-success">
+            <div>
+                Conta salva
+            </div>
+        </div>
+    </div>
+    <div style="display:none" id="trashmsg" class="position-absolute top-0 pt-5">
+        <div class="alert alert-info">
+            <div>
+                Excluído
+            </div>
+        </div>
+    </div>
+    <div style="display:none" id="emptymsg" class="position-absolute top-0 pt-5">
+        <div class="alert alert-warning">
+            <div>
+                Nada para calcular
+            </div>
+        </div>
+    </div>
+    <div style="display:none" id="savemsg" class="position-absolute top-0 pt-5">
+        <div class="alert alert-success">
+            <div>
+                Salvo
+            </div>
+        </div>
+    </div>
+    <div style="display:none" id="blankmsg" class="position-absolute top-0 pt-5">
+        <div class="alert alert-warning">
+            <div>
+                Nada para salvar
             </div>
         </div>
     </div>
