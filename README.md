@@ -17,7 +17,7 @@ https://jsfiddle.net/j_r_Samuel_Jr/zk2s798f/10/
 Aqui as dicas:<br>
 https://codepen.io/jrSamuel-Jr/pen/ExqXPaw
 
-https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/45/
+https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/46/
 
 #
 ![tela inicial da calculadora](./assets/captura__print.png)
