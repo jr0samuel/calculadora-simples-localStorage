@@ -84,8 +84,8 @@ function showContas()
     for(let i=0; i<contas.length; i++)
     {
         list.innerHTML += `<tr scope="row" tabindex="-1">
-            <td id='resultado' onclick="addDisplay('${contas[i]['conta']}')" tabindex="-1">
-                <span tabindex="0" id='calculum'>${contas[i]['conta']}</span>
+            <td id='resultado' tabindex="-1">
+                <span tabindex="0" id='calculum' onclick="addDisplay('${contas[i]['conta']}')">${contas[i]['conta']}</span>
             </td>
             <td id='botao_trash' tabindex="-1">
                 <button tabindex="0" id='btn-trash' onclick='removeConta("${contas[i]['conta']}")'>
