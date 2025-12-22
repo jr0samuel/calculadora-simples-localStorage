@@ -10,6 +10,7 @@ function insertAtCursor(n) {
         console.error('Display not found.');
     }
 }
+
 function calculate() {
     try {
         if (display.value === '') {
@@ -99,6 +100,14 @@ function showContas()
         <hr class="taghr" style="opacity:0 !important">`;
     }
 
+    const resultadoEls = list.querySelectorAll('#resultado');
+    resultadoEls.forEach(el => {
+        el.addEventListener('touchstart', (e) => { e.preventDefault(); e.stopPropagation(); });
+    });
+    resultadoEls.forEach(el => {
+        el.addEventListener('touchend', (e) => { e.preventDefault(); e.stopPropagation(); });
+    });
+
     const calculumEls = list.querySelectorAll('#calculum');
     calculumEls.forEach(el => {
         el.tabIndex = 0;
@@ -113,6 +122,10 @@ function showContas()
             }
         });
         el.addEventListener('click', () => { display.value = el.textContent.trim(); });
+    });
+    
+    calculumEls.forEach(el => {
+        el.addEventListener('touchstart', () => { addDisplay(el.textContent.trim()); });
     });
 
     const trashBtns = list.querySelectorAll('#btn-trash');
