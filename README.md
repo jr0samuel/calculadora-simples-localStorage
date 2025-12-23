@@ -9,11 +9,6 @@ https://codepen.io/jrSamuel-Jr/pen/xxvrKzb
 
 https://jsfiddle.net/j_r_Samuel_Jr/438gx6ar/54/
 <br><br>
-Outra versão:<br>
-https://codepen.io/jrSamuel-Jr/pen/zYgwJmJ
-
-https://jsfiddle.net/j_r_Samuel_Jr/zk2s798f/10/
-<br><br>
 Aqui as dicas:<br>
 https://codepen.io/jrSamuel-Jr/pen/ExqXPaw
 
