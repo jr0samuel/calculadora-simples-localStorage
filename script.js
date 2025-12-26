@@ -10,28 +10,32 @@ function insertAtCursor(n) {
         console.error('Display not found.');
     }
 }
-
 function calculate() {
     try {
         if (display.value === '') {
+            $('.alerta').stop(true, true).hide();
             $("#emptymsg").stop(true, true).show(1000).fadeOut(7500);
         } else {
             const result = math.evaluate(display.value);
             display.value += ` = ${result}`;
             addInputToHistory();
+            $('.alerta').stop(true, true).hide();
             $("#savedmsg").stop(true, true).show(1000).fadeOut(7500);
         }
     } catch {
         display.value
+        $('.alerta').stop(true, true).hide();
         $("#invalidmsg").stop(true, true).show(1000).fadeOut(7500);
     }
 }
 document.addEventListener('keydown',function(e){if(e.key==='Enter'){calculate();};});
 function save(){
     if (display.value === "") {
+        $('.alerta').stop(true, true).hide();
         $("#blankmsg").stop(true, true).show(1000).fadeOut(7500);
     } else {
         addInputToHistory();
+        $('.alerta').stop(true, true).hide();
         $("#savemsg").stop(true, true).show(1000).fadeOut(7500);
     }
 };
@@ -123,7 +127,7 @@ function showContas()
         });
         el.addEventListener('click', () => { display.value = el.textContent.trim(); });
     });
-    
+
     calculumEls.forEach(el => {
         el.addEventListener('touchstart', () => { addDisplay(el.textContent.trim()); });
     });
@@ -154,6 +158,7 @@ function removeConta(data)
     contas.splice(indice,1)
     localStorage.setItem(localStorageKey, JSON.stringify(contas))
     showContas()
+    $('.alerta').stop(true, true).hide();
     $("#trashmsg").stop(true, true).show(1000).fadeOut(7500);
 }
 showContas()
