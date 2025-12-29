@@ -80,8 +80,19 @@ input[type=button]:hover {
 }
 #tabela {
     max-height: 200px;
-    overflow-x: scroll;
-    scrollbar-width: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+#tabela::-webkit-scrollbar {
+    width: 20px;
+}
+#tabela::-webkit-scrollbar-thumb {
+    background: var(--color-yellow_green);
+}
+#tabela::-webkit-scrollbar-track {
+    background: var(--color-dark2);
+    border: 1px solid var(--color-blue);
 }
 #storage tr {
     word-break: break-word;

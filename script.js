@@ -83,9 +83,17 @@ function addInputToHistory(input)
 }
 function showContas()
 {
+    let tabela = document.getElementById('tabela');
     let contas = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
     let list = document.getElementById('storage')
     list.innerHTML = ""
+    if (contas.length === 0) {
+        tabela.style.overflow = 'hidden';
+        return;
+    }
+    if (contas.length === 1) tabela.style.maxHeight = '100px';
+    if (contas.length > 1) tabela.style.maxHeight = '200px';
+    tabela.style.overflowY = 'scroll';
     for(let i=0; i<contas.length; i++)
     {
         list.innerHTML += `<tr scope="row" tabindex="-1">
