@@ -13,6 +13,8 @@ https://jsfiddle.net/j_r_Samuel_Jr/438gx6ar/59/
 <br><br>
 Aqui as dicas:<br>
 https://codepen.io/jrSamuel-Jr/pen/ExqXPaw
+<br>
+https://codepen.io/collection/jOyjGR
 
 https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/48/
 
