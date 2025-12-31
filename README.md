@@ -6,6 +6,8 @@ https://calculadoracomdicas.vercel.app/
 <br><br>
 Se quiser ver o sistema junto com o código, há os links abaixo:<br>
 https://codepen.io/jrSamuel-Jr/pen/xxvrKzb
+<br>
+https://codepen.io/collection/jOyjGR
 
 https://jsfiddle.net/j_r_Samuel_Jr/438gx6ar/59/
 <br><br>
