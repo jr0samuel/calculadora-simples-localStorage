@@ -16,7 +16,7 @@ https://codepen.io/jrSamuel-Jr/pen/ExqXPaw
 <br>
 https://codepen.io/collection/jOyjGR
 
-https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/49/
+https://jsfiddle.net/j_r_Samuel_Jr/zc6farkm/50/
 
 #
 Essa calculadora é simples, mas tem um diferencial: você não precisa usar o teclado do seu aparelho, pode usar só as teclas da calculadora, veja a imagem abaixo, além disso, na parte final da página Dicas Matemáticas, deixei uma dica de uso sobre o visor por causa de um detalhe que pode ocorrer no celular.
