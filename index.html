@@ -30,7 +30,7 @@
                             <input id="botaoEnd" class="col tab" type="button" value="Fim" tabindex="-1">
                         </div>
                         <div class="row">
-                            <input id="botaoSpace" class="col tab" type="button" value="Espaço" onclick="insertAtCursor(' ')" tabindex="-1">
+                            <input id="botaoSpace" class="col tab" type="button" value="Espaço" tabindex="-1">
                         </div>
                         <div class="row">
                             <input class="col tab" type="button" value="+" onclick="insertAtCursor(' + ')" tabindex="-1">
@@ -91,6 +91,7 @@
         <div class="alert alert-danger">
             <div>
                 Conta inválida
+                <button type="button" class="btn-close fechar"></button>
             </div>
         </div>
     </div>
@@ -98,6 +99,7 @@
         <div class="alert alert-success">
             <div>
                 Conta realizada e salva
+                <button type="button" class="btn-close fechar"></button>
             </div>
         </div>
     </div>
@@ -105,6 +107,7 @@
         <div class="alert alert-info">
             <div>
                 Excluído
+                <button type="button" class="btn-close fechar"></button>
             </div>
         </div>
     </div>
@@ -112,6 +115,7 @@
         <div class="alert alert-warning">
             <div>
                 Nada para calcular
+                <button type="button" class="btn-close fechar"></button>
             </div>
         </div>
     </div>
@@ -119,6 +123,7 @@
         <div class="alert alert-success">
             <div>
                 Salvo
+                <button type="button" class="btn-close fechar"></button>
             </div>
         </div>
     </div>
@@ -126,6 +131,7 @@
         <div class="alert alert-warning">
             <div>
                 Nada para salvar
+                <button type="button" class="btn-close fechar"></button>
             </div>
         </div>
     </div>
@@ -140,6 +146,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.7.0/math.min.js"></script>
 
     <script src="script.js"></script>
+
+    <script>
+        $(document).ready(function fecharAlerts() {
+            $('.fechar').click(function () {
+                $(this).closest('.alerta').hide();
+            });
+        });
+    </script>    
 
 </body>
 

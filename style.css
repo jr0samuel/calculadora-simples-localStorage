@@ -161,10 +161,15 @@ input[type=button]:hover {
     padding: 5px 0px;
     border: var(--color-dark) 1px solid;
     cursor: default;
+    margin: 0px 10px 25px 10px;
 }
 #botao-dicas:hover {
     background: var(--color-grey2);
     outline: auto;
+}
+#display{
+    padding: 10px;
+    margin-bottom: 30px;
 }
 
 /* dicas.html */

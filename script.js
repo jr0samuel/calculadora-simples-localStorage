@@ -10,6 +10,7 @@ function insertAtCursor(n) {
         console.error('Display not found.');
     }
 }
+function insertSpace() { insertAtCursor(' '); }; document.getElementById('botaoSpace').addEventListener('click',insertSpace);
 function calculate() {
     try {
         if (display.value === '') {
