@@ -171,6 +171,14 @@ input[type=button]:hover {
     padding: 10px;
     margin-bottom: 30px;
 }
+.fechar{
+    margin-left: 15px;
+}
+div:has(.fechar){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /* dicas.html */
 
