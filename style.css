@@ -93,6 +93,7 @@ input[type=button]:hover {
 #tabela::-webkit-scrollbar-track {
     background: var(--color-dark2);
     border: 1px solid var(--color-blue);
+    border-top: 1px solid var(--color-dark);
 }
 #storage tr {
     word-break: break-word;

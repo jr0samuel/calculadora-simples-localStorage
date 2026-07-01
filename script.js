@@ -1,5 +1,6 @@
 const localStorageKey = 'contas-salvas'
 const display = document.querySelector('#display');
+
 function insertAtCursor(n) {
     if (display) {
         const start = display.selectionStart;
@@ -67,9 +68,7 @@ historyContainer.addEventListener('touchend', function(e) {
         btn.style.backgroundColor = 'var(--color-grey)';
     }
 })
-function resetDisplay() {
-    display.value = ""
-}
+function resetDisplay() { display.value = "" }
 function addInputToHistory(input)
 {
     if(display.value)
@@ -88,6 +87,7 @@ function showContas()
     let contas = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
     let list = document.getElementById('storage')
     list.innerHTML = ""
+
     if (contas.length === 0) {
         tabela.style.overflow = 'hidden';
         return;
@@ -95,6 +95,7 @@ function showContas()
     if (contas.length === 1) tabela.style.maxHeight = '100px';
     if (contas.length > 1) tabela.style.maxHeight = '200px';
     tabela.style.overflowY = 'scroll';
+
     for(let i=0; i<contas.length; i++)
     {
         list.innerHTML += `<tr scope="row" tabindex="-1">
@@ -157,9 +158,7 @@ function showContas()
     });
 
 }
-function addDisplay(resultado) {
-    display.value = resultado
-}
+function addDisplay(resultado) { display.value = resultado }
 function removeConta(data)
 {
     let contas = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
